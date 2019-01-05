@@ -24,14 +24,23 @@ class StoreDispatchTests: XCTestCase {
     }
 
     /**
-     it throws an exception when a reducer dispatches an action
+     it throws an exception when a reducer (without preloaded state) dispatches an action
      */
     func testThrowsExceptionWhenReducersDispatch() {
-        // Expectation lives in the `DispatchingReducer` class
+        let reducer = DispatchingReducer()
+        store = Store(reducer: reducer.handleAction, state: nil)
+        reducer.store = store
+        expectFatalError { self.store.dispatch(SetValueAction(10)) }
+    }
+
+    /**
+     it throws an exception when a reducer (with preloaded state) dispatches an action
+     */
+    func testThrowsExceptionWhenPreloadedReducersDispatch() {
         let reducer = DispatchingReducer()
         store = Store(reducer: reducer.handleAction, state: TestAppState())
         reducer.store = store
-        store.dispatch(SetValueAction(10))
+        expectFatalError { self.store.dispatch(SetValueAction(10)) }
     }
 
     /**
@@ -114,13 +123,11 @@ class StoreDispatchTests: XCTestCase {
 }
 
 // Needs to be class so that shared reference can be modified to inject store
-class DispatchingReducer: XCTestCase {
+class DispatchingReducer {
     var store: Store<TestAppState>?
 
     func handleAction(action: Action, state: TestAppState?) -> TestAppState {
-        expectFatalError {
-            self.store?.dispatch(SetValueAction(20))
-        }
+        store?.dispatch(SetValueAction(20))
         return state ?? TestAppState()
     }
 }
