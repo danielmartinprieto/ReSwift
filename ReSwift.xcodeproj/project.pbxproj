@@ -64,6 +64,9 @@
 		625E66BE1C1FFC880027C288 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625E66B81C1FFC880027C288 /* Reducer.swift */; };
 		625E66BF1C1FFC880027C288 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625E66B91C1FFC880027C288 /* State.swift */; };
 		625E66C11C1FFC880027C288 /* StoreSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625E66BB1C1FFC880027C288 /* StoreSubscriber.swift */; };
+		65674FBA21E1775100364706 /* StoreInitializationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65674FB921E1775100364706 /* StoreInitializationTests.swift */; };
+		65674FBB21E1775100364706 /* StoreInitializationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65674FB921E1775100364706 /* StoreInitializationTests.swift */; };
+		65674FBC21E1775100364706 /* StoreInitializationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65674FB921E1775100364706 /* StoreInitializationTests.swift */; };
 		73723E041D30AEF3006139F0 /* XCTest+Compatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73723E031D30AEF3006139F0 /* XCTest+Compatibility.swift */; };
 		73723E051D30AEF3006139F0 /* XCTest+Compatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73723E031D30AEF3006139F0 /* XCTest+Compatibility.swift */; };
 		73723E061D30AEF3006139F0 /* XCTest+Compatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73723E031D30AEF3006139F0 /* XCTest+Compatibility.swift */; };
@@ -155,6 +158,7 @@
 		625E66B81C1FFC880027C288 /* Reducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
 		625E66B91C1FFC880027C288 /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		625E66BB1C1FFC880027C288 /* StoreSubscriber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreSubscriber.swift; sourceTree = "<group>"; };
+		65674FB921E1775100364706 /* StoreInitializationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreInitializationTests.swift; sourceTree = "<group>"; };
 		73723E031D30AEF3006139F0 /* XCTest+Compatibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTest+Compatibility.swift"; sourceTree = "<group>"; };
 		73E545D41D22BC3900D114E8 /* Assertions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assertions.swift; sourceTree = "<group>"; };
 		73E545D91D22BCD600D114E8 /* XCTest+Assertions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTest+Assertions.swift"; sourceTree = "<group>"; };
@@ -294,6 +298,7 @@
 			children = (
 				625E669E1C1FFA3C0027C288 /* Info.plist */,
 				D490BC41203F27E000902589 /* PerformanceTests.swift */,
+				65674FB921E1775100364706 /* StoreInitializationTests.swift */,
 				73F39F331D3EE3C300DFFE62 /* StoreDispatchTests.swift */,
 				259737E91C2C611600869B8F /* StoreMiddlewareTests.swift */,
 				25AB3B7F1C54A79F00A41513 /* StoreSubscriberTests.swift */,
@@ -777,6 +782,7 @@
 				25AB3B831C54A84700A41513 /* StoreSubscriberTests.swift in Sources */,
 				25DBCF721C30C34000D63A58 /* StoreMiddlewareTests.swift in Sources */,
 				73E545DC1D22BCD600D114E8 /* XCTest+Assertions.swift in Sources */,
+				65674FBC21E1775100364706 /* StoreInitializationTests.swift in Sources */,
 				73723E061D30AEF3006139F0 /* XCTest+Compatibility.swift in Sources */,
 				73F39F3A1D3EE46A00DFFE62 /* StoreSubscriptionTests.swift in Sources */,
 				25DBCF741C30C34000D63A58 /* TypeHelperTests.swift in Sources */,
@@ -813,6 +819,7 @@
 				25AB3B821C54A84600A41513 /* StoreSubscriberTests.swift in Sources */,
 				25DBCF9D1C30C50000D63A58 /* StoreMiddlewareTests.swift in Sources */,
 				73E545DB1D22BCD600D114E8 /* XCTest+Assertions.swift in Sources */,
+				65674FBB21E1775100364706 /* StoreInitializationTests.swift in Sources */,
 				73723E051D30AEF3006139F0 /* XCTest+Compatibility.swift in Sources */,
 				73F39F391D3EE46A00DFFE62 /* StoreSubscriptionTests.swift in Sources */,
 				25DBCF9F1C30C50000D63A58 /* TypeHelperTests.swift in Sources */,
@@ -853,6 +860,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				625E66A71C1FFA640027C288 /* StoreTests.swift in Sources */,
+				65674FBA21E1775100364706 /* StoreInitializationTests.swift in Sources */,
 				73F39F341D3EE3C300DFFE62 /* StoreDispatchTests.swift in Sources */,
 				25AB3B811C54A84500A41513 /* StoreSubscriberTests.swift in Sources */,
 				D490BC43203F291800902589 /* PerformanceTests.swift in Sources */,
