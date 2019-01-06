@@ -65,6 +65,7 @@ open class Store<State: StateType>: StoreType {
     ) {
         self.subscriptionsAutomaticallySkipRepeats = automaticallySkipsRepeats
         self.reducer = reducer
+        self.state = state
 
         // Wrap the dispatch function with all middlewares
         self.dispatchFunction = middleware
@@ -80,11 +81,7 @@ open class Store<State: StateType>: StoreType {
                     return middleware(dispatch, getState)(dispatchFunction)
             })
 
-        if let state = state {
-            self.state = state
-        } else {
-            dispatch(ReSwiftInit())
-        }
+        dispatch(ReSwiftInit())
     }
 
     fileprivate func _subscribe<SelectedState, S: StoreSubscriber>(
